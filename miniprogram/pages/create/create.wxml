@@ -1,0 +1,13 @@
+<view class="page-container">
+  <view class="content-section">
+    <textarea class="content-input" placeholder="今天有啥新发现～" bindinput="handleInput"></textarea>
+  </view>
+  <view class="upload-section" >
+    <view wx:if="{{!imageUrl && !videoUrl}}" class="upload-item upload-item-add" bindtap="handleUpload"></view>
+    <image wx:if="{{imageUrl}}" class="upload-item" src="{{imageUrl}}"></image>
+    <video wx:if="{{videoUrl}}" class="upload-item" src="{{videoUrl}}"></video>
+  </view>
+  <view class="btn-section">
+    <button class="submit-btn" hover-class="btn-hover-color" bindtap="handleSubmit">发布</button>
+  </view>
+</view>
